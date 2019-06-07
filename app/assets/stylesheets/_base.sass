@@ -1,0 +1,34 @@
+@import 'variables'
+
+*
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+
+body
+  font-family: $base-font
+  font-size: 1em
+  margin: 0
+
+h1
+  color: $color1
+  font-size: 2em
+
+h2
+  color: $color2
+  font-size: 1.8em
+
+h3
+  color: $color3
+  font-size: 1.4em
+
+p
+  color: $color4
+  font-size: 1.2em
+
+// Container
+.container
+  padding: 20px
+  width: 100%
+  @media #{$desktop}
+    margin: auto
+    width: 940px

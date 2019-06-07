@@ -1,0 +1,136 @@
+@import 'variables'
+
+//--------- HEADER ---------
+.header
+  align-items: center
+  background-color: $color3
+  display: flex
+  height: 90px
+
+  @media #{$desktop}
+    background-color: $color3
+    width: 100%
+
+
+  .header-container
+    display: flex
+    justify-content: center
+    width: 100%
+
+    @media #{$desktop}
+      justify-content: space-between
+      margin: auto
+      max-width: 940px
+      text-align: left
+
+
+    .logo
+      display: none
+
+      @media #{$desktop}
+        display: block
+        width: 47px
+
+
+    .logo-mobile
+      display: block
+      width: 47px
+
+      @media #{$desktop}
+        display: none
+
+
+    .nav
+      display: none
+
+      &.active
+        background-color: $color3
+        display: block
+        left: calc(-100% - 20px)
+        opacity: .95
+        position: absolute
+        top: 90px
+        width: 100%
+
+        ul
+          list-style: none outside none
+          padding-left: 0
+          text-align: center
+
+          li
+            margin: 40px 0
+            padding-left: 0
+
+            a
+              margin: 0
+
+          li:last-child
+            margin: 60px 0
+            padding-left: 0
+
+      @media #{$desktop}
+        display: block
+
+        ul
+          diaplay: inline
+          list-style: none outside none
+
+          li
+            display: inline-block
+
+            & + li
+              margin-left: 39px
+
+          li:first-child
+            display: none
+
+    .btn-burger
+      cursor: pointer
+      height: 21px
+      position: absolute
+      right: 24px
+      top: 37px
+      width: 21px
+
+      @media #{$desktop}
+        display: none
+
+
+      span,
+      &::before,
+      &::after
+        background: $black
+        content: ''
+        height: 3px
+        position: absolute
+        right: 0
+        top: 0
+        transition: opacity .3s, transform .3s, top .3s
+        width: 21px
+
+      &::before
+        top: 0
+
+      span
+        top: 6px
+
+      &::after
+        top: 12px
+
+      &.close
+        span
+          opacity: 0
+
+        &::before
+          top: 7px
+          transform: rotate(45deg)
+
+        &::after
+          top: 7px
+          transform: rotate(-45deg)
+
+  .link-activ
+    text-decoration: underline
+
+  .nav-link
+    text-decoration: none
